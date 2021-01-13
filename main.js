@@ -90,3 +90,5 @@ var pallinoprecedente=pallinoattuale.prev();
  });
 
 // rileggendo le funzioni setinterval e clearinterval
+
+setInterval(function(){ immaginesuccessiva();}, 4000);
