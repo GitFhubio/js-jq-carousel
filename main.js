@@ -9,6 +9,17 @@
 
 // ma c'è il problema del limite
 
+
+// generazione pallini in js
+
+var nav=document.getElementsByClassName('nav')[0];
+var html='<i class="fas fa-circle first active"></i>';
+for (var i=1; i < 3; i++) {
+html+='<i class="fas fa-circle"></i>';
+}
+nav.innerHTML=html+'<i class="fas fa-circle last"></i>';
+
+
 $('.next').click(function(){immaginesuccessiva();})
 $('.prev').click(function(){immagineprecedente();})
 
