@@ -112,3 +112,14 @@ $(document).click(function() {
 $(document).keydown(function() {
     clearInterval(clock);
 });
+
+$('.fa-circle').click(function() {
+    var immagineattuale = $('img.active');
+    var pallinoattuale = $('.fa-circle.active');
+    immagineattuale.removeClass('active');
+    pallinoattuale.removeClass('active');
+    $(this).addClass('active');
+    var posizione = $(this).index();
+    var nuovaimmagine = $('img').eq(posizione);
+    nuovaimmagine.addClass('active');
+});
