@@ -76,3 +76,15 @@ var pallinoprecedente=pallinoattuale.prev();
 }
 
 // teoricamente dovrebbero andare anche le funzioni di intervallo per lo slide naturale
+// e poi poiché ho in mente di provare a fare una cosa nel weekend con keydown
+
+ $(document).keydown( function(event) {
+
+     if (event.keyCode == 37) {
+         immagineprecedente();
+     }
+
+     else if (event.keyCode == 39) {
+         immaginesuccessiva();
+     }
+ });
