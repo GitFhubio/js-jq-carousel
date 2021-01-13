@@ -7,10 +7,14 @@
   //   $('.images img.active').removeClass('active').prev().addClass('active');
   // })
 
-// o meglio
+// ma c'è il problema del limite
 
-$('.next').click(immaginesuccessiva);
-$('.prev').click(immagineprecedente);
+$('.next').click(function(){immaginesuccessiva();})
+$('.prev').click(function(){immagineprecedente();})
+
+// ma funzionava anche
+// $('.next').click(immaginesuccessiva);
+// $('.prev').click(immagineprecedente);
 
 function immaginesuccessiva()
 {
@@ -78,8 +82,10 @@ var pallinoprecedente=pallinoattuale.prev();
 // teoricamente dovrebbero andare anche le funzioni di intervallo per lo slide naturale
 // e poi poiché ho in mente di provare a fare una cosa nel weekend con keydown
 
- $(document).keydown( function(event) {
+// setInterval(function(){ immaginesuccessiva();}, 4000);
+var clock=setInterval(function(){ immaginesuccessiva();}, 4000);
 
+ $(document).keydown( function(event) {
      if (event.keyCode == 37) {
          immagineprecedente();
      }
@@ -89,6 +95,9 @@ var pallinoprecedente=pallinoattuale.prev();
      }
  });
 
-// rileggendo le funzioni setinterval e clearinterval
-
-setInterval(function(){ immaginesuccessiva();}, 4000);
+$(document).click(function() {
+    clearInterval(clock);
+});
+$(document).keydown(function() {
+    clearInterval(clock);
+});
