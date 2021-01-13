@@ -31,20 +31,27 @@ var pallinosuccessivo=pallinoattuale.next();
         immaginesuccessiva.addClass('active');
         $('.fa-circle:first-child').addClass('active');
     }
-
+}
 
 // oppure l'if lo potevo fare cosi
 
-    // if(immagineattuale.hasClass('last')) {
-    //   immagineattuale = $('img:first-child');
-    //   immagineattuale.addClass('active');
-    //
-    // } else {
-    //   immaginesuccessiva.addClass('active');
-    //       pallinosuccessivo.addClass('active');
-    // }
+// immaginesuccessiva.addClass('active');
+// pallinosuccessivo.addClass('active');
+//
+//
+//     if(immagineattuale.hasClass('last')) {
+//       immagineattuale = $('img.first');
+//       immagineattuale.addClass('active');
+//       pallinoattuale=$('.fa-circle.first');
+//       pallinoattuale.addClass('active');
 
-}
+      // queste ultime due righe erano evitabili perché tanto next non esiste
+      // immaginesuccessiva.removeClass('active');
+      // pallinosuccessivo.removeClass('active');
+
+//     }
+//
+// }
 
 function immagineprecedente()
 {
@@ -67,3 +74,5 @@ var pallinoprecedente=pallinoattuale.prev();
     }
 
 }
+
+// teoricamente dovrebbero andare anche le funzioni di intervallo per lo slide naturale
