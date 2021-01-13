@@ -88,3 +88,5 @@ var pallinoprecedente=pallinoattuale.prev();
          immaginesuccessiva();
      }
  });
+
+// rileggendo le funzioni setinterval e clearinterval
