@@ -10,18 +10,18 @@
 // o meglio
 
 $('.next').click(immaginesuccessiva);
-// $('.prev').click(immagineprecedente);
+$('.prev').click(immagineprecedente);
 
 function immaginesuccessiva()
 {
 var immagineattuale=$('img.active');
-var pallinoattuale=$('fa-circle.active');
+var pallinoattuale=$('.fa-circle.active');
 
 immagineattuale.removeClass('active');
 pallinoattuale.removeClass('active');
 
-var immaginesuccessiva=immagineattuale.next('img');
-var pallinosuccessivo=pallinoattuale.next('img');
+var immaginesuccessiva=immagineattuale.next();
+var pallinosuccessivo=pallinoattuale.next();
 
     if(immaginesuccessiva.length != 0) {
       immaginesuccessiva.addClass('active');
@@ -43,5 +43,27 @@ var pallinosuccessivo=pallinoattuale.next('img');
     //   immaginesuccessiva.addClass('active');
     //       pallinosuccessivo.addClass('active');
     // }
+
+}
+
+function immagineprecedente()
+{
+var immagineattuale=$('img.active');
+var pallinoattuale=$('.fa-circle.active');
+
+immagineattuale.removeClass('active');
+pallinoattuale.removeClass('active');
+
+var immagineprecedente=immagineattuale.prev();
+var pallinoprecedente=pallinoattuale.prev();
+
+    if(immagineprecedente.length != 0) {
+      immagineprecedente.addClass('active');
+        pallinoprecedente.addClass('active');
+    } else {
+        immagineprecedente = $('img:last-child');
+        immagineprecedente.addClass('active');
+        $('.fa-circle:last-child').addClass('active');
+    }
 
 }
