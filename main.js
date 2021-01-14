@@ -124,7 +124,7 @@ $('.fa-circle').click(function() {
     nuovaimmagine.addClass('active');
 });
 
-meglio keyCode di which che è deprecato
+// meglio keyCode di which che è deprecato
 
 
 // $(document).ready(
