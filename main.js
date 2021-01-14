@@ -41,6 +41,14 @@ $(document).ready(
       }).appendTo('.nav');}
     })
 
+// in javascript puro è uguale il ciclo però faccio
+
+// var nav=document.getElementsByClassName('nav')[0];
+// var pallino=document.createElement('i')
+// pallino.className=dotClass;
+// nav.appendChild(pallino);
+
+
 $('.next').click(function(){immaginesuccessiva();})
 $('.prev').click(function(){immagineprecedente();})
 
