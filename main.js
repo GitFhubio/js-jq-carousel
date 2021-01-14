@@ -123,3 +123,29 @@ $('.fa-circle').click(function() {
     var nuovaimmagine = $('img').eq(posizione);
     nuovaimmagine.addClass('active');
 });
+
+meglio keyCode di which che è deprecato
+
+
+// $(document).ready(
+//   function(){
+//
+//     var countImgs = $('img').length;
+//
+//     for(var x = 0; x < countImgs; x++) {
+//       var dotClass = 'fas fa-circle';
+//
+//       if(x === 0) {
+//         dotClass += ' active first';
+//       }
+//
+//       if(x === countImgs - 1) {
+//         dotClass += ' last'
+//       }
+//
+//       $('<i></i>', {
+//         'class': dotClass
+//       }).appendTo('.nav');
+//     }
+
+// generazione html in jquery
