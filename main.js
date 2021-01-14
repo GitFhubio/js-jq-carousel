@@ -10,15 +10,36 @@
 // ma c'è il problema del limite
 
 
-// generazione pallini in js
+// generazione pallini in js puro ma va fatto con createElement e appendChild
 
-var nav=document.getElementsByClassName('nav')[0];
-var html='<i class="fas fa-circle first active"></i>';
-for (var i=1; i < 3; i++) {
-html+='<i class="fas fa-circle"></i>';
-}
-nav.innerHTML=html+'<i class="fas fa-circle last"></i>';
+// var nav=document.getElementsByClassName('nav')[0];
+// var html='<i class="fas fa-circle first active"></i>';
+// for (var i=1; i < 3; i++) {
+// html+='<i class="fas fa-circle"></i>';
+// }
+// nav.innerHTML=html+'<i class="fas fa-circle last"></i>';
+//
 
+$(document).ready(
+  function(){
+
+    var countImgs = $('img').length;
+
+    for(var x = 0; x < countImgs; x++) {
+      var dotClass = 'fas fa-circle';
+
+      if(x === 0) {
+        dotClass += ' active first';
+      }
+
+      if(x === countImgs - 1) {
+        dotClass += ' last'
+      }
+
+      $('<i></i>', {
+        'class': dotClass
+      }).appendTo('.nav');}
+    })
 
 $('.next').click(function(){immaginesuccessiva();})
 $('.prev').click(function(){immagineprecedente();})
@@ -127,25 +148,5 @@ $('.fa-circle').click(function() {
 // meglio keyCode di which che è deprecato
 
 
-// $(document).ready(
-//   function(){
-//
-//     var countImgs = $('img').length;
-//
-//     for(var x = 0; x < countImgs; x++) {
-//       var dotClass = 'fas fa-circle';
-//
-//       if(x === 0) {
-//         dotClass += ' active first';
-//       }
-//
-//       if(x === countImgs - 1) {
-//         dotClass += ' last'
-//       }
-//
-//       $('<i></i>', {
-//         'class': dotClass
-//       }).appendTo('.nav');
-//     }
 
 // generazione html in jquery
